@@ -1,0 +1,29 @@
+<%= form_for(@peso) do |f| %>
+  <% if @peso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@peso.errors.count, "error") %> prohibited this peso from being saved:</h2>
+
+      <ul>
+      <% @peso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :peso %><br>
+    <%= f.number_field :peso %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario_id %><br>
+    <%= f.number_field :usuario_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pesos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Peso</th>
+      <th>Usuario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pesos.each do |peso| %>
+      <tr>
+        <td><%= peso.fecha %></td>
+        <td><%= peso.peso %></td>
+        <td><%= peso.usuario_id %></td>
+        <td><%= link_to 'Show', peso %></td>
+        <td><%= link_to 'Edit', edit_peso_path(peso) %></td>
+        <td><%= link_to 'Destroy', peso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Peso', new_peso_path %>
+
+

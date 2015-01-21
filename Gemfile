@@ -47,5 +47,7 @@ group :development, :test do
   gem 'less-rails'
   gem 'autoprefixer-rails'
   gem 'semantic-ui-rails'
+
+  gem 'devise'
 end
 

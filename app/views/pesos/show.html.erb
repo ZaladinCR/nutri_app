@@ -1,0 +1,17 @@
+<p>
+  <strong>Fecha:</strong>
+  <%= @peso.fecha %>
+</p>
+
+<p>
+  <strong>Peso:</strong>
+  <%= @peso.peso %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @peso.usuario_id %>
+</p>
+
+<%= link_to 'Edit', edit_peso_path(@peso) %> |
+<%= link_to 'Back', pesos_path %>
